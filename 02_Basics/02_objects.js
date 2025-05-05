@@ -35,10 +35,22 @@ obj1.fullname = {
 
 
 // Ways of accessing object keys and values 
-console.log(obj1);
+// console.log(obj1);
 
-console.log(Object.keys(obj1));
-console.log(Object.values(obj1));
-console.log(Object.entries(obj1));
+// console.log(Object.keys(obj1));
+// console.log(Object.values(obj1));
+// console.log(Object.entries(obj1));
 
-console.log(obj1.hasOwnProperty("name")); // returns whether it has that key or not
+// console.log(obj1.hasOwnProperty("name")); // returns whether it has that key or not
+
+
+//******** Destructuring Objects ********/
+
+let course = {
+    courseName:"Js",
+    courseInstructor:"hitesh",
+    price: 999
+}
+
+const {courseInstructor:instructor} = course
+console.log(instructor);
