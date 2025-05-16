@@ -1,0 +1,38 @@
+body{
+    margin:0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+.container{
+    background-color: gray;
+    border-radius: 5px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1, h2, p{
+    color:white;
+}
+
+#txtbox{
+  border-radius: 5px;
+  margin-bottom: 5px;  
+}
+
+.btn{
+    background-color: black;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
