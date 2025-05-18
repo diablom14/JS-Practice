@@ -1,0 +1,15 @@
+body{
+    background-color: rgb(77, 76, 76);
+}
+
+.container{
+    background-color: antiquewhite;
+    height:400px;
+    width:500px;
+    margin:auto;
+    margin-top: 10%;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
