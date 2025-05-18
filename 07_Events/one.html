@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set time out and interval</title>
+</head>
+<body>
+    <h1>Hello World</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    let sayDate = null
+    document.getElementById('start').addEventListener('click',(e)=>{
+        if(sayDate==null){
+            sayDate = setInterval(()=>{
+                console.log(Date.now());
+            }, 2000)
+        }     
+    })
+
+    document.getElementById('stop').addEventListener('click',()=>{
+        clearInterval(sayDate)
+    })
+</script>
+</html>
