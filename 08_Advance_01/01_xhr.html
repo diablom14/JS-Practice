@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XMLHttpRequests</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+        .container{
+            height:400px;
+            width: 500px;
+            background-color: antiquewhite;
+            border-radius: 5px;
+
+            margin: auto;
+            margin-top: 10%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>List of different dog breeds</h3>
+        <ul id="list">
+
+        </ul>
+    </div>
+</body>
+<script>
+    const url = 'https://dogapi.dog/api/v2/breeds'
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET', url)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState==4){
+            const datas = (JSON.parse(this.responseText)).data
+            datas.forEach(element => {
+                let name = element.attributes.name
+                let list = document.getElementById('list')
+                let li = document.createElement('li')
+                li.innerText = name
+                list.appendChild(li)
+            });
+            
+            
+        }
+        
+    }
+    xhr.send()
+
+</script>
+</html>
